@@ -5,16 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>QR Code Generator</h1>
-    <form id="urlForm">
-        <label for="urlInput">Enter URL:</label>
-        <input type="text" id="urlInput" name="url">
-        <button type="submit">Generate QR Code</button>
-    </form>
-    <img id="qrImage" alt="QR Code will appear here">
+    <div class="container">
+        <h1>QR Code Generator</h1>
+        <form id="urlForm">
+            <label for="urlInput">Enter URL:</label>
+            <input type="text" id="urlInput" name="url" required placeholder="https://example.com">
+            <button type="submit">Generate QR Code</button>
+        </form>
+        <div id="qrCode"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
     <script src="app.js"></script>
 </body>
 
